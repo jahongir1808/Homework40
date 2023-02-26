@@ -1,0 +1,182 @@
+$mainColor: #2987be;
+$mainColor2: #1059b8;
+
+#body {
+  background-color: #c0ceaa;
+}
+#phone {
+  width: 430px;
+  height: 360px;
+  margin: 100px auto;
+  padding: 30px;
+  display: grid;
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: rgba(103, 112, 212, 0.8);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 25px;
+  .phone-icons {
+    display: flex;
+    justify-content: center;
+    p {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 600;
+      font-size: 1.125rem;
+    }
+  }
+  img {
+    padding: 10px;
+    width: 100px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.3s;
+    &:hover {
+      background-color: rgb(255, 255, 255, 0.7);
+    }
+  }
+}
+
+.containerTimer {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+#timerBody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  margin: 0;
+  background-color: rgb(131, 194, 173);
+  p {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.625rem;
+    background-color: azure;
+  }
+}
+
+.timer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &Block {
+    width: 150px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    .time {
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $mainColor;
+      color: white;
+      font-size: 95px;
+    }
+    .title {
+      padding: 5px;
+      font-size: 16px;
+      background-color: $mainColor2;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      text-align: center;
+      color: white;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 880px;
+  margin: 0 auto;
+  margin-top: 150px;
+  button {
+    padding: 10px;
+    width: 180px;
+    border: none;
+    border-radius: 10px;
+    font-size: 10px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    &#start,
+    &#stop {
+      color: $mainColor;
+      &:hover {
+        background-color: $mainColor2;
+        color: white;
+      }
+    }
+    &#pause {
+      &:hover {
+        background-color: #6dede2;
+      }
+    }
+  }
+}
+
+.resultsBlock {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  width: 250px;
+  border: 1px solid $mainColor2;
+  color: $mainColor;
+  font-size: 18px;
+  padding: 15px;
+  text-align: center;
+}
+
+.results-info {
+  margin: 10px 0;
+}
+
+#clockBody {
+  background-color: black;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#clock {
+  color: white;
+  margin-top: 30vh;
+  font-weight: bold;
+  font-size: 20vh;
+}
+
+#alarmBody {
+  width: 50%;
+  margin: 0 auto;
+  background-color: black;
+  text-align: center;
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  button {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+input[type="time"] {
+  padding: 10px 10px 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.active {
+  background-color: #1059b8;
+  color: white;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>Document</title>
+  </head>
+  <body id="alarmBody">
+    <h1>Будильник</h1>
+    <input type="time" id="alarm-time" />
+    <audio style="display: none" src="audio.wav" controls id="audio"></audio>
+    <button onclick="setAlarm()" id="startAlarm">Установить будильник</button>
+    <button onclick="setStopAlarm()" id="stopAlarm">Stop</button>
+    <script>
+      function setAlarm() {
+        const alarmTime = document.getElementById("alarm-time").value;
+        const now = new Date();
+        const alarm = new Date(now.toDateString() + " " + alarmTime);
+
+        if (alarm < now) {
+          alarm.setDate(alarm.getDate() + 1);
+        }
+
+        const timeUntilAlarm = alarm.getTime() - now.getTime();
+
+        setTimeout(() => {
+          audio.play();
+        }, timeUntilAlarm);
+        setStopAlarm(() => {
+          audio.stop();
+        }, timeUntilAlarm);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>Document</title>
+  </head>
+  <body id="timerBody">
+    <div class="containerTimer">
+      <div class="timer">
+        <div class="timerBlock">
+          <div class="time" id="hour">00</div>
+          <div class="title">Hours</div>
+        </div>
+
+        <div class="timerBlock">
+          <div class="time" id="minute">00</div>
+          <div class="title">Minutes</div>
+        </div>
+
+        <div class="timerBlock">
+          <div class="time" id="second">00</div>
+          <div class="title">Seconds</div>
+        </div>
+
+        <div class="timerBlock">
+          <div class="time" id="millisecond">00</div>
+          <div class="title">Milliseconds</div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+        <button id="stop">Stop</button>
+        <button id="new">New</button>
+      </div>
+    </div>
+
+    <div class="resultsBlock">
+      <div class="resultsTitle">Results</div>
+      <div id="results"></div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
