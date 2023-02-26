@@ -8,8 +8,13 @@
       name="description"
       content="Matinlaringizni bir bosish orqali lotinchadan krillchaga yoki krillchadan lotinchaga tarjima qiling!"
     />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
     <title>LOTIN-KRILL TRANSLATOR</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
   </head>
 
   <body>
@@ -20,8 +25,9 @@
     <div class="container">
       <div class="form">
         <textarea
+          id="myTextarea"
           class="area area-1"
-          placeholder="Tarjima qilinadigan matn"
+          placeholder="Translated text"
           cols="30"
           rows="10"
         >
@@ -29,9 +35,10 @@
         </textarea>
 
         <textarea
+          id="myTextarea"
           class="area area-2"
           readonly
-          placeholder="Tarjima qilingan matn"
+          placeholder="Translated text"
           cols="30"
           rows="10"
         ></textarea>
@@ -39,11 +46,15 @@
 
       <div class="btn-group">
         <button class="btn translate-btn">TARJIMA QILISH</button>
-        <button class="btn change-btn">ALMASHTIRISH</button>
+        <button class="btn change-btn" id="swap-btn">
+          <i class="uil uil-exchange-alt"></i>
+        </button>
+        <button class="btn change-btn" id="capitalize">Capitalize</button>
+        <button class="btn change-btn" id="uppercase">Uppercase</button>
+        <button class="btn change-btn" id="lowerCase">Lowercase</button>
       </div>
     </div>
 
-    <!-- JAVASCRIPT -->
     <script src="./index.js" defer></script>
   </body>
 </html>

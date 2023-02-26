@@ -2,9 +2,10 @@ const navbarLogo = document.querySelector(".nav__logo");
 const translateBtn = document.querySelector(".translate-btn");
 const firstInput = document.querySelector(".area-1");
 const secondInput = document.querySelector(".area-2");
-const shareBtn = document.querySelector(".share-btn");
 const changeBtn = document.querySelector(".change-btn");
+
 // varribles
+
 const lotinAlphabet = /sh|ch|ya|[a-z]|'/gi;
 const krillAlphabet = /[а-я]/gi;
 const lotinArr = [
@@ -100,15 +101,53 @@ translateBtn.addEventListener("click", () => {
 
   firstInput.value = inputValue;
 });
-// Change translator
+
 changeBtn.addEventListener("click", () => {
   isChanged = !isChanged;
   if (isChanged) {
-    navbarLogo.innerHTML = "KRILL-<span>LOTIN</span> TARJIMON";
+    navbarLogo.innerHTML = "KRILL-<span>LOTIN</span> TRANSLATOR";
   } else {
-    navbarLogo.innerHTML = "LOTIN-<span>KRILL</span> TARJIMON";
+    navbarLogo.innerHTML = "LOTIN-<span>KRILL</span> TRANSLATOR";
   }
   firstInput.value = "";
   secondInput.value = "";
   navigator.vibrate([500]);
+});
+
+const capitalize = document.getElementById("capitalize");
+const upperCase = document.getElementById("uppercase");
+const lowerCase = document.getElementById("lowerCase");
+
+function toUpperCase(text) {
+  return text.toUpperCase();
+}
+
+function toLowerCase(text) {
+  return text.toLowerCase();
+}
+
+function toCapitalize(text) {
+  return text.replace(/(^|\s)\S/g, function (firstLetter) {
+    return firstLetter.toUpperCase();
+  });
+}
+
+const textarea = document.getElementById("myTextarea");
+
+upperCase.addEventListener("click", () => {
+  let text = textarea.value;
+  let uppercaseText = toUpperCase(text);
+  textarea.value = uppercaseText;
+});
+
+capitalize.addEventListener("click", () => {
+  let text = textarea.value;
+  let capitalizeText = toCapitalize(text);
+  textarea.value = capitalizeText;
+});
+
+lowerCase.addEventListener("click", () => {
+  let text = textarea.value;
+  let lowercaseText = toLowerCase(text);
+  textarea.value = lowercaseText;
 });

@@ -163,6 +163,11 @@
   font-weight: 600;
 }
 
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
 input[type=time] {
   padding: 10px 10px 10px 20px;
   border-radius: 5px;
